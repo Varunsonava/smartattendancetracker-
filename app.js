@@ -342,9 +342,17 @@ class FacebookBot {
         switch (action) {
             case "personal_details":
                 let userContact = contexts[0].parameters['user-phone'];
+                let userName = contexts[0].parameters['user-name'];
+                let userEmail = contexts[0].parameters['user-email'];
                 if (userContact.length <=0)
                     userContact = '';
                 console.log("User Contact is: ", userContact);
+                if (userName.length <=0)
+                    userName = '';
+                console.log("User Name is: ", userName);
+                if (userEmail.length <=0)
+                    userEmail = '';
+                console.log("User Email is: ", userEmail);
                 this.doRichContentResponse(sender, responseMessages);
                 break;
             default:
