@@ -344,9 +344,10 @@ class FacebookBot {
                 let userContact = contexts[0].parameters['user-phone'];
                 let userName = contexts[0].parameters['user-name'];
                 let userEmail = contexts[0].parameters['user-email'];
+                console.log("User Contact is: ", userContact);
                 if (userContact.length <=0)
                     userContact = '';
-                console.log("User Contact is: ", userContact);
+                
                 if (userName.length <=0)
                     userName = '';
                 console.log("User Name is: ", userName);
