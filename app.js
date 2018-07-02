@@ -340,7 +340,7 @@ class FacebookBot {
 
     handleApiAiAction(sender, action, responseMessages, contexts, parameters) {
         switch (action) {
-            case "personal-details":
+            case "personal_details":
                 let userContact = contexts[0].parameters['user-phone'];
                 if (userContact.length <=0)
                     userContact = '';
