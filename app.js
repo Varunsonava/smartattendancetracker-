@@ -9,10 +9,10 @@ const JSONbig = require('json-bigint');
 const async = require('async');
 
 const REST_PORT = (process.env.PORT || 5000);
-const APIAI_ACCESS_TOKEN = process.env.APIAI_ACCESS_TOKEN || '6b5abbf2bd784995bebb3fd23386ecf9';
+const APIAI_ACCESS_TOKEN = process.env.APIAI_ACCESS_TOKEN || '3e5970072f84414096b7d248e768aa17';
 const APIAI_LANG = process.env.APIAI_LANG || 'en';
 const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN || '123456789';
-const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN || 'EAAbGlBeOGUcBAA7iOGUmi9SWR50nT0fyjkP3KZCyJt4aWfED9bhDT9svwpwPHZC2grl88xR0UtnnZCKZCsZBqWRkhZBpasuSeOwG8fmdJEIGZCl2SEKoyfSrcVou0FlLAtX2xcMHlrcwPUC3fTefpUknrRTidUUzWkLwsqCFzuM1gZDZD';
+const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN || 'EAADkFjAyL98BAFtlEsJ1oYD0DLjZABEfq9lE2CIWPPfkBa1Q0cL8pGbC9BjDIsTr5tCZBifL5ZAQNpvL7iNTiJdviouFNOU9q28oqcmxqu1okXZBtOFNq9ziRZA1Y6s89XZCZCMPu7C4gCfBXNYpp20fCP7aQmOZBJzZBGkjCIYk72wZDZD';
 const FB_TEXT_LIMIT = 640;
 
 const FACEBOOK_LOCATION = "FACEBOOK_LOCATION";
@@ -69,8 +69,6 @@ class FacebookBot {
                     if (message.speech) {
 
                         let splittedText = this.splitResponse(message.speech);
-                        splittedText = "hello...." + splittedText
-
                         splittedText.forEach(s => {
                             facebookMessages.push({text: s});
                         });
